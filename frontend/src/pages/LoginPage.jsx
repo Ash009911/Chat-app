@@ -3,6 +3,7 @@ import { useAuthStore } from "../store/useAuthStore";
 import AuthImagePattern from "../components/AuthImagePattern";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
+import SpotlightCard from "../components/SpotlightCard";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +19,11 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="h-screen grid">
+    <div className="flex justify-center items-center min-h-screen">
+      <SpotlightCard
+          className="custom-spotlight-card w-full max-w-3xl mt-4 mb-4"
+          spotlightColor="rgba(0, 229, 255, 0.2)"
+        >
       {/* Left Side - Form */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
@@ -103,6 +108,7 @@ const LoginPage = () => {
         </div>
       </div>
 
+ </SpotlightCard>
       
     </div>
   );

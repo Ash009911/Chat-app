@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, User } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import SpotlightCard from "../components/SpotlightCard";
 import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
 
@@ -35,7 +35,11 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="min-h-screen grid">
+    <div className="flex justify-center items-center min-h-screen">
+    <SpotlightCard
+        className="custom-spotlight-card w-full max-w-3xl mt-4 mb-4"
+        spotlightColor="rgba(0, 229, 255, 0.2)"
+      >
       {/* left side */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
@@ -136,7 +140,7 @@ const SignUpPage = () => {
           </div>
         </div>
       </div>
-
+    </SpotlightCard>
     </div>
   );
 };
